@@ -1,2 +1,1 @@
-# what-i-learned-today
-Daily Notes
+# Front-end Notes
