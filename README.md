@@ -31,9 +31,9 @@ constructor(){
 }
 ...
 this.setState(prevState => {
-   const updatedTasks = prevState.task.map(task => {
-      return (task.id === 1 ? Object.assign({}, task, {isComplete: !task.isComplete}) : task)
+   const updatedTasks = prevState.tasks.map(task => {
+      return (task.id === 1 ? Object.assign({}, task, {isCompleted: !task.isCompleted}) : task)
    })
-   return {task: updatedTasks}
+   return {tasks: updatedTasks}
 })
 ```
