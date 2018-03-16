@@ -2,6 +2,7 @@
 
 ### Get
 
+```
 const httpGet = (url, callback, err = console.error) => {
   const request = new XMLHttpRequest();
   request.open('GET', url, true);
@@ -9,9 +10,11 @@ const httpGet = (url, callback, err = console.error) => {
   request.onerror = () => err(request);
   request.send();
 };
-
+```
 
 ### Post
+
+```
 const httpPost = (url, data, callback, err = console.error) => {
   const request = new XMLHttpRequest();
   request.open('POST', url, true);
@@ -20,3 +23,4 @@ const httpPost = (url, data, callback, err = console.error) => {
   request.onerror = () => err(request);
   request.send(data);
 };
+```
