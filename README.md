@@ -5,3 +5,5 @@
 [Arrays and Objects](arrays-and-objects.md)
 
 [React JS](react.md)
+
+[Ajax](ajax.md)
