@@ -1,5 +1,11 @@
 # React JS
 
+### Printing State or Props inside component itself
+
+```
+<pre>{JSON.stringify(this.state.todos, null, 2)}</pre>
+```
+
 ### Updating nested state object in React using ID
 
 ```
