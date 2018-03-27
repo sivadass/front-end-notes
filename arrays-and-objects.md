@@ -14,3 +14,26 @@ console.log(userIDs); //[0, 1, 2];
 ```
 
 ### Filter array of objects by key value
+```
+let users = [
+  {id: 0, name: "John", age: 25},
+  {id: 1, name: "Stephen", age: 21},
+  {id: 2, name: "Robin", age: 32}
+];
+let elder = users.filter((user) => {
+  return user.age == 32;
+});
+console.log(elder); //[{id: 2, name: "Robin", age: 32}]
+```
+
+### Find Index of array item
+```
+let users = [
+  {id: 0, name: "John", age: 25},
+  {id: 1, name: "Stephen", age: 21},
+  {id: 2, name: "Robin", age: 32}
+];
+let key = 0; // Let's find an object which has 0 as id
+let index = users.findIndex((user => user.id == key));
+console.log(index); //0
+```
