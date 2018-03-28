@@ -26,7 +26,7 @@ let elder = users.filter((user) => {
 console.log(elder); //[{id: 2, name: "Robin", age: 32}]
 ```
 
-### Find Index of array item
+### Find index of array item
 ```
 let users = [
   {id: 0, name: "John", age: 25},
@@ -36,4 +36,25 @@ let users = [
 let key = 0; // Let's find an object which has 0 as id
 let index = users.findIndex((user => user.id == key));
 console.log(index); //0
+```
+
+### Convert boolean and number type Key value to string type
+```
+let users = [
+  {name: "John", age: 25, adult: true},
+  {name: "Stephen", age: 17, adult: false},
+  {name: "Robin", age: 32, adult: true}
+];
+
+let usersString = JSON.stringify(users, replacer);
+
+function replacer(key, value) {
+  if (typeof value === "boolean" || typeof value === "number") {
+    return String(value);
+  }
+  return value;
+}
+
+console.log(usersString);
+// [{"name":"John","age":"25","adult":"true"},{"name":"Stephen","age":"17","adult":"false"},{"name":"Robin","age":"32","adult":"true"}]
 ```
