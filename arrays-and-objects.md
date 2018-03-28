@@ -58,3 +58,24 @@ function replacer(key, value) {
 console.log(usersString);
 // [{"name":"John","age":"25","adult":"true"},{"name":"Stephen","age":"17","adult":"false"},{"name":"Robin","age":"32","adult":"true"}]
 ```
+
+### Renaming Object Keys in Arrays
+
+```
+let users = [
+  {name: "John Doe", mail: "john@acme.com"},
+  {name: "Stephen King", mail: "stephen@aol.com"},
+  {name: "Robin Sharma", mail: "robin@redux.com"}
+];
+const keysToRename = { name: 'fullname', mail: 'email' };
+const renamer = item => Object.assign(...Object.keys(item).map(k => ({ [keysToRename[k] || k]: item[k] })));
+let renamedUsersArray = users.map(renamer);
+
+console.log(renamedUsersArray);
+// Output
+[
+  {fullname: "John Doe", email: "john@acme.com"},
+  {fullname: "Stephen King", email: "stephen@aol.com"},
+  {fullname: "Robin Sharma", email: "robin@redux.com"}
+]
+```
