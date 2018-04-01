@@ -79,3 +79,23 @@ console.log(renamedUsersArray);
   {fullname: "Robin Sharma", email: "robin@redux.com"}
 ]
 ```
+
+### Search and Filter
+```
+let users = [
+  {name: "John Doe", mail: "john@acme.com"},
+  {name: "Stephen King", mail: "stephen@aol.com"},
+  {name: "Robin Sharma", mail: "robin@redux.com"}
+];
+
+let searchTerm = "Ro"
+let filteredUsers = users.filter(user => {
+  return user.name.indexOf(searchTerm) !== -1;
+});
+
+consile.log(filteredUsers);
+// Result
+[
+  {name: "Robin Sharma", mail: "robin@redux.com"}
+]
+```
