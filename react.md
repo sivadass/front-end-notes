@@ -35,3 +35,68 @@ this.setState(prevState => {
    return {tasks: updatedTasks}
 })
 ```
+
+### Bind methods in React Components
+
+```
+// 1.Bind in constructor
+class A extends React.Component {
+  constructor(props) {
+    super(props)
+    this._eventHandler = this._eventHandler.bind(this)
+  }
+
+  _eventHandler() {
+    // ...
+  }
+
+  render() {
+    return <div onClick={this._eventHandler} />
+  }
+}
+
+// 2.Arrow function in render()
+class A extends React.Component {
+  _eventHandler() {
+    // ...
+  }
+
+  render() {
+    return <div onClick={()=>{this._eventHandler()}} />
+  }
+}
+
+// 3. bind in render()
+class A extends React.Component {
+  _eventHandler() {
+    // ...
+  }
+
+  render() {
+    return <div onClick={this._eventHandler.bind(this)} />
+  }
+}
+
+// 4. ES2015 arrow function in class fields
+class A extends React.Component {
+  _eventHandler = () => {
+    // ...
+  }
+
+  render() {
+    return <div onClick={this._eventHandler} />
+  }
+}
+
+// 5. @autobind decorator
+class A extends React.Component {
+  @autobind
+  _eventHandler() {
+    // ...
+  }
+
+  render() {
+    return <div onClick={this._eventHandler} />
+  }
+}
+```
