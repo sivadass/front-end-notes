@@ -8,4 +8,4 @@
 
 [Ajax](ajax.md)
 
-[Images](images.md)
+[Images](image.md)
