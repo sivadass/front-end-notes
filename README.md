@@ -7,3 +7,5 @@
 [React JS](react.md)
 
 [Ajax](ajax.md)
+
+[Images](images.md)
