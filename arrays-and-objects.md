@@ -106,3 +106,27 @@ let obj = {};
 console.log(Object.keys(obj).length); 
 //returns 0 if empty or an integer > 0 if non-empty
 ```
+
+### Filter an array of objects by an array of integers
+```
+let users = [
+  {id: 0, name: "John", age: 25},
+  {id: 1, name: "Stephen", age: 21},
+  {id: 2, name: "Robin", age: 32},
+  {id: 3, name: "Robin", age: 45},
+  {id: 4, name: "Robin", age: 80}
+];
+
+let userIDsToExclude = [1,4];
+
+let result = users.filter(item => !userIDsToExclude.includes(item.id))
+
+console.log(result);
+
+// Result
+[
+  {id: 0, name: "John", age: 25},
+  {id: 2, name: "Robin", age: 32},
+  {id: 3, name: "Robin", age: 45}
+]
+```
