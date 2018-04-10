@@ -99,3 +99,10 @@ consile.log(filteredUsers);
   {name: "Robin Sharma", mail: "robin@redux.com"}
 ]
 ```
+
+### Check whether an Object is Empty
+```
+let obj = {};
+console.log(Object.keys(obj).length); 
+//returns 0 if empty or an integer > 0 if non-empty
+```
