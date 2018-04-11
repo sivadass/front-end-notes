@@ -11,3 +11,9 @@ function getRandomColor() {
   return color;
 }
 ```
+
+### Updating VS Code in Ubuntu
+```
+sudo dpkg -r code
+sudo dpkg -i code_downloaded_package.deb
+```
