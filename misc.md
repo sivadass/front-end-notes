@@ -49,3 +49,23 @@ To view the next message in the queue
 ```
 n
 ```
+
+### VS Code Configuration
+```
+{
+    "window.zoomLevel": 0.25,
+    "workbench.startupEditor": "newUntitledFile",
+    "git.autofetch": true,
+    "workbench.colorTheme": "Cobalt2",
+    "editor.fontFamily": "Operator Mono Book, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 24,
+    "editor.letterSpacing": 0.5,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": true,
+    "git.enableSmartCommit": true,
+    "terminal.integrated.fontFamily": "Operator Mono Book, monospace",
+    "terminal.integrated.enableBold": false,
+    "terminal.integrated.fontSize": 16
+}
+```
