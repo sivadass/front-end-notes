@@ -130,3 +130,31 @@ console.log(result);
   {id: 3, name: "Robin", age: 45}
 ]
 ```
+
+
+### Convert array of Objecta to an Array
+```
+let answers = [
+  {
+    "custom_question_id": 491,
+    "custom_question": "One",
+    "custom_option1": "A",
+    "custom_option2": "B",
+    "custom_knockout": false,
+    "custom_answer": "",
+    "custom_question_required": true
+  },
+  {
+    "custom_question_id": 492,
+    "custom_question": "Two",
+    "custom_option1": "A",
+    "custom_option2": "B",
+    "custom_knockout": true,
+    "custom_answer": "",
+    "custom_question_required": false
+  }
+]
+let answers = data.map((item) => {
+	return item.id
+})
+```
