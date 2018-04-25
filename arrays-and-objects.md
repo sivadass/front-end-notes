@@ -132,29 +132,34 @@ console.log(result);
 ```
 
 
-### Convert array of Objecta to an Array
+### Convert array of Object to an Array of Values
 ```
-let answers = [
-  {
-    "custom_question_id": 491,
-    "custom_question": "One",
-    "custom_option1": "A",
-    "custom_option2": "B",
-    "custom_knockout": false,
-    "custom_answer": "",
-    "custom_question_required": true
-  },
-  {
-    "custom_question_id": 492,
-    "custom_question": "Two",
-    "custom_option1": "A",
-    "custom_option2": "B",
-    "custom_knockout": true,
-    "custom_answer": "",
-    "custom_question_required": false
-  }
-]
-let answers = data.map((item) => {
+let users = [
+  {id: 0, name: "John", age: 25},
+  {id: 1, name: "Stephen", age: 21},
+  {id: 2, name: "Robin", age: 32},
+  {id: 3, name: "Robin", age: 45},
+  {id: 4, name: "Robin", age: 80}
+];
+
+let answers = user.map((item) => {
 	return item.id
 })
+```
+
+### Filter matching key names from Object Properties
+```
+let sampleObject = {
+    answer-295: "A",
+    answer-296: "C",
+    answer-297: "D",
+    title: "Lorem Ipsum",
+    description: "Dolor Simmit"
+}
+let answerIDKeys = Object.keys(sampleObject).filter((name) => {
+    return /answer/.test(name)
+});
+
+// Output
+["answer-295", "answer-296", "answer-297"]
 ```
