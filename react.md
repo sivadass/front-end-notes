@@ -100,3 +100,8 @@ class A extends React.Component {
   }
 }
 ```
+
+### Get data from redux store
+```
+$r.store.getState();
+```
