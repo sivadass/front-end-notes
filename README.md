@@ -9,3 +9,7 @@
 [Ajax](ajax.md)
 
 [Images](image.md)
+
+[Utils](mime-types.md)
+
+[Miscelllanous](misc.md)
