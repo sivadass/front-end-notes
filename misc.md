@@ -58,3 +58,41 @@ n
     "terminal.integrated.fontSize": 16
 }
 ```
+
+### VS Code Snippet
+```
+{
+	"Create React Stateful Component": {
+		"scope": "javascript,typescript",
+		"prefix": "stateful",
+		"body": [
+			"class App$1 extends React.Component{",
+			"\tconstructor(props){",
+			"\t\tsuper(props);",
+			"\t\tthis.state = {",
+			"\t\t\tisDummyState: true",
+			"\t\t}",
+			"\t}",
+			"\trender(){",
+			"\t\treturn(",
+			"\t\t\t<div>$2</div>",
+			"\t\t)",
+			"\t}",
+			"}"
+		],
+		"description": "Stateful React Component with dummy state"
+	},
+	"Create React Dumb Component": {
+		"scope": "javascript,typescript",
+		"prefix": "dumb",
+		"body": [
+			"const App$1 = (props) => {",
+			"\treturn(",
+			"\t\t<div>$2</div>",
+			"\t)",
+			"}"
+		],
+		"description": "Stateless React Component with props"
+	},
+}
+```
