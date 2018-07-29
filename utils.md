@@ -1,6 +1,7 @@
 # Utitlity Functions
 
 ### Random Color Generator
+
 ```
 function getRandomColor() {
   let letters = '0123456789ABCDEF'
@@ -10,4 +11,76 @@ function getRandomColor() {
   }
   return color;
 }
+```
+
+### Axios Wrapper
+
+```
+import axios from "axios";
+import { loadState } from "./localStorage";
+
+class Service {
+  constructor() {
+    let service = axios.create({
+      headers: {
+        Authorization: "BEARER some token"
+      }
+    });
+    service.interceptors.response.use(this.handleSuccess, this.handleError);
+    this.service = service;
+  }
+
+  handleSuccess(response) {
+    return response;
+  }
+
+  handleError = error => {
+    switch (error.response.status) {
+      case 401:
+        this.redirectTo(document, "/");
+        break;
+      case 404:
+        this.redirectTo(document, "/404");
+        break;
+      default:
+        this.redirectTo(document, "/500");
+        break;
+    }
+    return Promise.reject(error);
+  };
+
+  redirectTo = (document, path) => {
+    document.location = path;
+  };
+
+  get(path, callback) {
+    return this.service
+      .get(path)
+      .then(response => callback(response.status, response.data));
+  }
+
+  patch(path, payload, callback) {
+    return this.service
+      .request({
+        method: "PATCH",
+        url: path,
+        responseType: "json",
+        data: payload
+      })
+      .then(response => callback(response.status, response.data));
+  }
+
+  post(path, payload, callback) {
+    return this.service
+      .request({
+        method: "POST",
+        url: path,
+        responseType: "json",
+        data: payload
+      })
+      .then(response => callback(response.status, response.data));
+  }
+}
+
+export default new Service();
 ```
