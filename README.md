@@ -6,7 +6,7 @@
 
 [React JS](react.md)
 
-[Redux Cheatsheet](redux-stater.md)
+[Redux Cheatsheet](redux-starter.md)
 
 [Ajax](ajax.md)
 
