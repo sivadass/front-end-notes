@@ -6,6 +6,8 @@
 
 [React JS](react.md)
 
+[Redux Cheatsheet](redux-stater.md)
+
 [Ajax](ajax.md)
 
 [Images](image.md)
