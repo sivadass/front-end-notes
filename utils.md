@@ -13,6 +13,19 @@ function getRandomColor() {
 }
 ```
 
+### Format Number to Indian Number System
+```
+let price = 987450000;
+
+let formattedPrice = price.toLocaleString("en-IN", {
+    maximumFractionDigits: 3,
+    style: 'currency',
+    currency: 'INR'
+});
+
+console.log(formattedPrice); // ₹ 98,74,50,000.00
+```
+
 ### Axios Wrapper
 
 ```
